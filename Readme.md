@@ -22,12 +22,16 @@ A modern, cinematic, and high-performance portfolio website designed for creativ
 
 ## 🌟 Key Features
 
-- **Cinematic Dark Mode Aesthetic:** Deep dark tones (`#121212`) and sharp typography to highlight photos, color grading, and video showreels.
-- **Interactive Before/After Slider:** Showcases photo/video editing skills using an intuitive left-to-right comparison component.
-- **Filterable Media Gallery:** Dynamic grid/masonry gallery filtered by tags (_Wedding, Commercial, Portrait, Landscape, Music Videos_).
-- **Embedded Video Showcase:** Smooth Vimeo/YouTube video preview integrations.
-- **Booking & Inquiry API:** Contact form hooked to the Express backend with direct WhatsApp integration.
-- **Client Proofing Portal (Optional):** Protected API endpoints for client image/video selection.
+- **🌓 Dynamic Theme Toggle (Dark & Light Mode):**
+  - **Dark Mode (Default):** Deep dark tones (`#121212`) for a sleek, cinematic, and distraction-free viewing experience.
+  - **Light Mode:** Clean, minimalist light background for high-contrast readability.
+- **🌐 Multi-Language Support (i18n):**
+  - Instant language switcher between **Bahasa Indonesia** and **English**.
+- **🎞️ Interactive Before/After Slider:** Showcases photo/video editing and color grading skills with an intuitive drag slider.
+- **📂 Filterable Media Gallery:** Dynamic grid/masonry gallery filtered by categories (_Wedding, Commercial, Portrait, Landscape, Music Videos_).
+- **🎬 Embedded Video Showcase:** Smooth Vimeo/YouTube video preview integrations.
+- **📩 Booking & Inquiry API:** Contact form connected to the Express backend with direct WhatsApp Business integration.
+- **🔒 Client Proofing Portal (Optional):** Protected API endpoints for client image/video selection.
 
 ---
 
