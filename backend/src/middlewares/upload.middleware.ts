@@ -11,6 +11,21 @@ const ensureDirExists = (dirPath: string) => {
     }
 };
 
+export const handleUploadFields = (fields: { name: string; maxCount: number }[]) => {
+    return (req: Request, res: Response, next: NextFunction) => {
+        const uploadFn = upload.fields(fields);
+        uploadFn(req, res, (err: any) => {
+            if (err) {
+                return res.status(400).json({
+                    status: 'error',
+                    message: err.message || 'Gagal mengunggah file.',
+                });
+            }
+            next();
+        });
+    };
+};
+
 // Helper: Menentukan sub-folder berdasarkan fieldname atau req.body
 const getSubFolder = (req: Request, fieldname: string): string => {
     // 1. Avatar Foto Profil User
@@ -43,13 +58,20 @@ const storage = multer.memoryStorage();
 export const upload = multer({
     storage,
     limits: {
-        fileSize: 100 * 1024 * 1024 // Maximum limit 100MB (untuk video)
+        fileSize: 100 * 1024 * 1024 // 100MB
     },
     fileFilter: (_req, file, cb) => {
-        if (file.mimetype.startsWith('image/') || file.mimetype.startsWith('video/')) {
+        // Cek ekstensi file secara manual jika mimetype tidak terbaca dengan baik
+        const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg', 'video/mp4', 'video/quicktime'];
+        const isMimeValid = file.mimetype.startsWith('image/') || file.mimetype.startsWith('video/');
+
+        if (isMimeValid || allowedMimeTypes.includes(file.mimetype)) {
             cb(null, true);
         } else {
-            cb(new Error('Format file tidak didukung! Hanya diperbolehkan Gambar (JPG, PNG, WebP) atau Video (MP4, MOV).'));
+            // Melempar Error dengan flag multer
+            const error = new Error('Format file tidak didukung! Hanya diperbolehkan Gambar (JPG, PNG, WebP) atau Video (MP4, MOV).');
+            error.name = 'MulterError';
+            cb(error as any, false);
         }
     },
 });

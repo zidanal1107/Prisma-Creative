@@ -7,6 +7,7 @@ import userRoutes from "./routes/user.route";
 import categoryRoutes from "./routes/category.route";
 import portfolioRoutes from "./routes/portfolio.route";
 import inquiryRoutes from "./routes/inquiry.route";
+import clientGalleries from "./routes/client-gallery.route";
 
 const app = express();
 
@@ -27,5 +28,6 @@ app.use("/api/users", userRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/portfolios", portfolioRoutes);
 app.use("/api/inquiries", inquiryRoutes);
+app.use("/api/client-galleries", clientGalleries);
 
 export default app;

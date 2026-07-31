@@ -114,19 +114,19 @@ Portal galeri privat untuk klien melihat dan memilih foto hasil _shoot_ mengguna
 
 ### **Files to Create:**
 
-- [ ] `src/interfaces/client-gallery.interface.ts`
-- [ ] `src/repositories/client-gallery.repository.ts`
-- [ ] `src/services/client-gallery.service.ts`
-- [ ] `src/controllers/client-gallery.controller.ts`
-- [ ] `src/routes/client-gallery.route.ts`
+- [x] `src/interfaces/client-gallery.interface.ts`
+- [x] `src/repositories/client-gallery.repository.ts`
+- [x] `src/services/client-gallery.service.ts`
+- [x] `src/controllers/client-gallery.controller.ts`
+- [x] `src/routes/client-gallery.route.ts`
 
 ### **API Endpoints:**
 
-- [ ] `POST /api/client-galleries` — _(Admin)_ Buat proyek galeri baru + generate Access Code
-- [ ] `POST /api/client-galleries/verify` — _(Public)_ Verifikasi Access Code untuk membuka galeri klien
-- [ ] `POST /api/client-galleries/:id/media` — _(Admin)_ Bulk upload foto/video draf ke galeri klien
-- [ ] `PATCH /api/client-galleries/media/:mediaId/select` — _(Client)_ Klien memilih/menandai foto untuk di-edit
-- [ ] `DELETE /api/client-galleries/:id` — _(Admin)_ Hapus galeri proyek yang sudah selesai
+- [x] `POST /api/client-galleries` — _(Admin)_ Buat proyek galeri baru + generate Access Code
+- [x] `POST /api/client-galleries/verify` — _(Public)_ Verifikasi Access Code untuk membuka galeri klien
+- [x] `POST /api/client-galleries/:id/media` — _(Admin)_ Bulk upload foto/video draf ke galeri klien
+- [x] `PATCH /api/client-galleries/media/:mediaId/select` — _(Client)_ Klien memilih/menandai foto untuk di-edit
+- [x] `DELETE /api/client-galleries/:id` — _(Admin)_ Hapus galeri proyek yang sudah selesai
 
 ---
 
@@ -137,4 +137,4 @@ Portal galeri privat untuk klien melihat dan memilih foto hasil _shoot_ mengguna
 - [x] **Section 2 (Categories):** 100%
 - [x] **Section 3 (Portfolios):** 100%
 - [x] **Section 4 (Inquiries):** 100%
-- [ ] **Section 5 (Client Galleries):** 0%
+- [x] **Section 5 (Client Galleries):** 100%
