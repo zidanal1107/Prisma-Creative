@@ -11,6 +11,24 @@ const ensureDirExists = (dirPath: string) => {
     }
 };
 
+// Helper function: Menentukan sub-folder berdasarkan fieldname atau req.body
+const getSubFolder = (req: Request, fieldname: string): string => {
+    // 1. Jika dikirim dari field 'avatar'
+    if (fieldname === 'avatar') {
+        return 'avatars';
+    }
+    // 2. Jika dikirim dari field 'client_gallery'
+    if (fieldname === 'client_gallery') {
+        return 'client-galleries';
+    }
+    // 3. Jika ada req.body.category_folder khusus dari frontend
+    if (req.body && req.body.category_folder) {
+        return req.body.category_folder;
+    }
+    // 4. Default fallback untuk portfolio / media
+    return 'portfolios';
+};
+
 // Gunakan memoryStorage agar file diolah di RAM dulu sebelum dikompresi
 const storage = multer.memoryStorage();
 
@@ -34,9 +52,8 @@ export const processMedia = async (req: Request, res: Response, next: NextFuncti
 
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
 
-    // Tentukan sub-folder tujuan (default: 'portfolios')
-    // Bisa di-pass dari frontend/form-data via req.body.category_folder (e.g., 'avatars', 'before-after', 'proofing')
-    const subFolder = req.body.category_folder || 'portfolios';
+    // Otomatis tentukan sub-folder berdasarkan fieldname input file
+    const subFolder = getSubFolder(req, req.file.fieldname);
 
     // PROSES FILE GAMBAR
     if (req.file.mimetype.startsWith('image/')) {
@@ -47,10 +64,18 @@ export const processMedia = async (req: Request, res: Response, next: NextFuncti
             const filename = `${req.file.fieldname}-${uniqueSuffix}.webp`;
             const outputPath = path.join(folderPath, filename);
 
-            // Compress & Resize menggunakan Sharp
-            await sharp(req.file.buffer)
-                .resize(1920, null, { withoutEnlargement: true }) // Lebar max 1920px (Full HD)
-                .webp({ quality: 80 })                           // Convert ke WebP, Kualitas 80%
+            // Resizing khusus jika yang di-upload adalah avatar (misal: 500x500 square)
+            const sharpPipeline = sharp(req.file.buffer);
+
+            if (req.file.fieldname === 'avatar') {
+                sharpPipeline.resize(500, 500, { fit: 'cover' }); // Crop persegi khusus foto profil
+            } else {
+                sharpPipeline.resize(1920, null, { withoutEnlargement: true }); // Lebar max 1920px untuk portfolio
+            }
+
+            // Compress & Convert ke WebP
+            await sharpPipeline
+                .webp({ quality: 80 })
                 .toFile(outputPath);
 
             req.file.filename = filename;

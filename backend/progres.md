@@ -33,13 +33,14 @@ Mengelola autentikasi JWT dan manajemen akun Admin, Fotografer, Editor, serta Vi
 
 ### **API Endpoints:**
 
-- [ ] `POST /api/auth/login` — Login user & generate JWT Token
-- [ ] `GET /api/auth/me` — Ambil data profil user yang sedang aktif
-- [ ] `POST /api/users` — _(Admin)_ Tambah user/talent baru
-- [ ] `GET /api/users` — Ambil daftar tim/talent untuk halaman About
-- [ ] `PUT /api/users/:id` — Update data profil & bio (Multi-language)
-- [ ] `PATCH /api/users/:id/avatar` — Upload/ganti foto profil avatar
-- [ ] `DELETE /api/users/:id` — _(Admin)_ Hapus user
+- [x] `POST /api/auth/login` — Login user & generate JWT Token
+- [x] `POST /api/auth/register` — Register user
+- [x] `GET /api/auth/me` — Ambil data profil user yang sedang aktif
+- [x] `POST /api/users` — _(Admin)_ Tambah user/talent baru
+- [x] `GET /api/users` — Ambil daftar tim/talent untuk halaman About
+- [x] `PUT /api/users/:id` — Update data profil & bio (Multi-language)
+- [x] `PATCH /api/users/:id/avatar` — Upload/ganti foto profil avatar
+- [x] `DELETE /api/users/:id` — _(Admin)_ Hapus user
 
 ---
 
@@ -49,18 +50,18 @@ Master data kategori untuk mengelompokkan portofolio (Wedding, Commercial, Portr
 
 ### **Files to Create:**
 
-- [ ] `src/interfaces/category.interface.ts`
-- [ ] `src/repositories/category.repository.ts`
-- [ ] `src/services/category.service.ts`
-- [ ] `src/controllers/category.controller.ts`
-- [ ] `src/routes/category.route.ts`
+- [x] `src/interfaces/category.interface.ts`
+- [x] `src/repositories/category.repository.ts`
+- [x] `src/services/category.service.ts`
+- [x] `src/controllers/category.controller.ts`
+- [x] `src/routes/category.route.ts`
 
 ### **API Endpoints:**
 
-- [ ] `GET /api/categories` — Ambil semua daftar kategori
-- [ ] `POST /api/categories` — _(Admin)_ Tambah kategori baru
-- [ ] `PUT /api/categories/:id` — _(Admin)_ Edit nama kategori (Multi-language) & slug
-- [ ] `DELETE /api/categories/:id` — _(Admin)_ Hapus kategori
+- [x] `GET /api/categories` — Ambil semua daftar kategori
+- [x] `POST /api/categories` — _(Admin)_ Tambah kategori baru
+- [x] `PUT /api/categories/:id` — _(Admin)_ Edit nama kategori (Multi-language) & slug
+- [x] `DELETE /api/categories/:id` — _(Admin)_ Hapus kategori
 
 ---
 
@@ -132,8 +133,8 @@ Portal galeri privat untuk klien melihat dan memilih foto hasil _shoot_ mengguna
 ## 📊 Summary Progress Status
 
 - [x] **Section 0:** 100% Completed
-- [ ] **Section 1 (User & Auth):** 0%
-- [ ] **Section 2 (Categories):** 0%
+- [x] **Section 1 (User & Auth):** 100%
+- [x] **Section 2 (Categories):** 0%
 - [ ] **Section 3 (Portfolios):** 0%
 - [ ] **Section 4 (Inquiries):** 0%
 - [ ] **Section 5 (Client Galleries):** 0%
