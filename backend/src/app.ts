@@ -6,6 +6,7 @@ import authRoutes from "./routes/auth.route";
 import userRoutes from "./routes/user.route";
 import categoryRoutes from "./routes/category.route";
 import portfolioRoutes from "./routes/portfolio.route";
+import inquiryRoutes from "./routes/inquiry.route";
 
 const app = express();
 
@@ -25,5 +26,6 @@ app.use("/api/users", userRoutes);
 
 app.use("/api/categories", categoryRoutes);
 app.use("/api/portfolios", portfolioRoutes);
+app.use("/api/inquiries", inquiryRoutes);
 
 export default app;

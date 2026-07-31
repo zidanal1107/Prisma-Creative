@@ -93,18 +93,18 @@ Menerima formulir pemesanan (_booking_) atau pertanyaan dari calon klien di webs
 
 ### **Files to Create:**
 
-- [ ] `src/interfaces/inquiry.interface.ts`
-- [ ] `src/repositories/inquiry.repository.ts`
-- [ ] `src/services/inquiry.service.ts`
-- [ ] `src/controllers/inquiry.controller.ts`
-- [ ] `src/routes/inquiry.route.ts`
+- [x] `src/interfaces/inquiry.interface.ts`
+- [x] `src/repositories/inquiry.repository.ts`
+- [x] `src/services/inquiry.service.ts`
+- [x] `src/controllers/inquiry.controller.ts`
+- [x] `src/routes/inquiry.route.ts`
 
 ### **API Endpoints:**
 
-- [ ] `POST /api/inquiries` — _(Public)_ Klien mengirim form pesan/booking
-- [ ] `GET /api/inquiries` — _(Admin)_ Melihat daftar semua pesanan/pesan masuk
-- [ ] `PATCH /api/inquiries/:id/status` — _(Admin)_ Update status (`new` ➔ `contacted` ➔ `completed` ➔ `cancelled`)
-- [ ] `DELETE /api/inquiries/:id` — _(Admin)_ Hapus data inquiry
+- [x] `POST /api/inquiries` — _(Public)_ Klien mengirim form pesan/booking
+- [x] `GET /api/inquiries` — _(Admin)_ Melihat daftar semua pesanan/pesan masuk
+- [x] `PATCH /api/inquiries/:id/status` — _(Admin)_ Update status (`new` ➔ `contacted` ➔ `completed` ➔ `cancelled`)
+- [x] `DELETE /api/inquiries/:id` — _(Admin)_ Hapus data inquiry
 
 ---
 
@@ -134,7 +134,7 @@ Portal galeri privat untuk klien melihat dan memilih foto hasil _shoot_ mengguna
 
 - [x] **Section 0:** 100% Completed
 - [x] **Section 1 (User & Auth):** 100%
-- [x] **Section 2 (Categories):** 0%
-- [ ] **Section 3 (Portfolios):** 0%
-- [ ] **Section 4 (Inquiries):** 0%
+- [x] **Section 2 (Categories):** 100%
+- [x] **Section 3 (Portfolios):** 100%
+- [x] **Section 4 (Inquiries):** 100%
 - [ ] **Section 5 (Client Galleries):** 0%
