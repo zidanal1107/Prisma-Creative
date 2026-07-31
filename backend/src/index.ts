@@ -10,6 +10,9 @@ async function startServer() {
 
     console.log("Database connected");
 
+    app.get("/", (req, res) => {
+      res.send("API berjalan");
+    })
     app.listen(PORT, () => {
       console.log(`Server running on http://localhost:${PORT}`);
     });
