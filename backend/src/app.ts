@@ -1,9 +1,11 @@
 import express from "express";
 import cors from "cors";
 import path from "path";
+
 import authRoutes from "./routes/auth.route";
 import userRoutes from "./routes/user.route";
 import categoryRoutes from "./routes/category.route";
+import portfolioRoutes from "./routes/portfolio.route";
 
 const app = express();
 
@@ -22,5 +24,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 
 app.use("/api/categories", categoryRoutes);
+app.use("/api/portfolios", portfolioRoutes);
 
 export default app;

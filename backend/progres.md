@@ -71,19 +71,19 @@ Manajemen karya foto, video showreel, dan fitur slider Before-After editing.
 
 ### **Files to Create:**
 
-- [ ] `src/interfaces/portfolio.interface.ts`
-- [ ] `src/repositories/portfolio.repository.ts`
-- [ ] `src/services/portfolio.service.ts`
-- [ ] `src/controllers/portfolio.controller.ts`
-- [ ] `src/routes/portfolio.route.ts`
+- [x] `src/interfaces/portfolio.interface.ts`
+- [x] `src/repositories/portfolio.repository.ts`
+- [x] `src/services/portfolio.service.ts`
+- [x] `src/controllers/portfolio.controller.ts`
+- [x] `src/routes/portfolio.route.ts`
 
 ### **API Endpoints:**
 
-- [ ] `GET /api/portfolios` — Ambil semua portofolio (Support filter `category`, `type`, `is_featured`)
-- [ ] `GET /api/portfolios/:slug` — Detail 1 portofolio + galeri foto di dalamnya
-- [ ] `POST /api/portfolios` — _(Authed)_ Create portofolio + Upload Media (Thumbnail / Video / Before-After)
-- [ ] `PUT /api/portfolios/:id` — _(Authed)_ Update info portofolio & deskripsi multi-bahasa
-- [ ] `DELETE /api/portfolios/:id` — _(Admin)_ Hapus portofolio beserta file fisik dari disk
+- [x] `GET /api/portfolios` — Ambil semua portofolio (Support filter `category`, `type`, `is_featured`)
+- [x] `GET /api/portfolios/:slug` — Detail 1 portofolio + galeri foto di dalamnya
+- [x] `POST /api/portfolios` — _(Authed)_ Create portofolio + Upload Media (Thumbnail / Video / Before-After)
+- [x] `PUT /api/portfolios/:id` — _(Authed)_ Update info portofolio & deskripsi multi-bahasa
+- [x] `DELETE /api/portfolios/:id` — _(Admin)_ Hapus portofolio beserta file fisik dari disk
 
 ---
 
